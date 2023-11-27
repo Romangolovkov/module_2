@@ -1,4 +1,9 @@
-prices: list[int] = [10, 20, 30, 40, 50]
+from random import randrange
+
+amount_prices: int = int(input('Введите количество цен: '))
+prices: list[int] = [randrange(10, 100, 10) for i in range(amount_prices)]
+print(prices)
+
 new_prices: list[str] = []
 
 for i in range(len(prices)):
