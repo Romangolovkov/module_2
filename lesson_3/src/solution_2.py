@@ -1,4 +1,4 @@
-worker_1, worker_2, worker_3, worker_4 = 'Света', 'Олег', 'Маша', 'Паша'
-print(f'В чётные дни работают: {worker_1} и {worker_2}')
+workers = ['Света', 'Маша', 'Олег', 'Паша']
+print(f'В чётные дни работают: {workers[0]} и {workers[2]}')
 print()
-print(f'В нечётные дни работают: {worker_3} и {worker_4}')
+print(f'В нечётные дни работают: {workers[1]} и {workers[3]}')
