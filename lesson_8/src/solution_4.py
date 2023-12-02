@@ -11,4 +11,4 @@ for worker in workers:
         design[worker[1]] = worker[2]
 
 print(f'Снабжение: {supply}')
-print(f'Снабжение: {design}')
+print(f'Дизайн: {design}')
