@@ -1,6 +1,7 @@
-def calculate_discount() -> int:
-    prices_and_discount = [int(number) for number in input('Введите цены и скидку через запятую: ').split(', ')]
-    print(f'Сумма скидки: {sum(prices_and_discount[:-1]) * prices_and_discount[-1] / 100}')
+def calculate_discount(numbers: list[int]) -> int:
+    return sum(numbers[:-1]) * numbers[-1] / 100
 
 
-calculate_discount()
+numbers = [50, 150, 250, 20]
+
+print(f'Сумма скидки: {calculate_discount(numbers)}')
