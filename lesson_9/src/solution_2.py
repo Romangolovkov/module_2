@@ -1,6 +1,5 @@
-def convert_to_hex() -> str:
-    rgb: list[int] = [int(number) for number in input('Введите три числа цветов (R, G, B) от 0 до 255 через запятую: ').split(', ')]
-    print(f'HEX: {rgb[0]:X}{rgb[1]:X}{rgb[2]:X}')
+def convert_to_hex(rgb: tuple[int]) -> str:
+    return f'{rgb[0]:X}{rgb[1]:X}{rgb[2]:X}'
     
 
-convert_to_hex()
+print(f'HEX: {convert_to_hex((0, 0, 255))}')
