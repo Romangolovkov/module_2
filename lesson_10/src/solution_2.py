@@ -8,7 +8,7 @@ def color_background(hour: int) -> str:
 
 
 print()
-hour: int = int(input('Введите текущий час (от 0 до 23): '))
-
-color_background(hour)
+color_background(10)
+color_background(20)
+color_background(5)
 print()
