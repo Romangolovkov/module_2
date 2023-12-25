@@ -5,14 +5,14 @@ def check_order(order: dict[str, int|str]) -> bool:
     return bool(order['items'])
 
 
-def package_order(order: dict[str, int|str]) -> str:
+def package_order(order: dict[str, int|str]) -> str|None:
     if check_order(order):
         return f'Упакован заказ {order["id"]}'
-    else:
-        return f'Заказ {order["id"]} пуст'
 
 
 def send_order(check_order: Callable[[dict[str, int|str]], bool], package_order: Callable[[dict[str, int|str]], str], order: dict[str, int|str]) -> str:
+    if check_order(order) == False:
+        return f'Отправка: Заказ {order["id"]} пуст'
     return 'Отправка: ' + package_order(order)
 
 
