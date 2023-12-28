@@ -1,6 +1,9 @@
-cashe = {}
+from typing import Callable
 
-def decorator_cashe(func):
+cashe: dict[tuple: int] = {}
+
+
+def decorator_cashe(func: Callable[[tuple], int]) -> Callable[[tuple], None]:
     def wrapper(*args):
         if args in cashe:
             print(f'Загрузили из кеша: {cashe[args]}')
@@ -8,15 +11,10 @@ def decorator_cashe(func):
             print(f'Посчитали цену: {func(*args)}')
             cashe[args] = func(*args)
     return wrapper
-        
-
-
-
-
 
 
 @decorator_cashe
-def calculate_project_cost(*args, **kwargs):
+def calculate_project_cost(*args) -> int:
     return 3000
 
 
