@@ -14,9 +14,10 @@ def decorator_cashe(func: Callable[[tuple], int]) -> Callable[[tuple], None]:
 
 
 @decorator_cashe
-def calculate_project_cost() -> int:
+def calculate_project_cost(*args) -> int:
     return 3000
 
 
 calculate_project_cost('Логотип', 'малый бизнес')
 calculate_project_cost('Логотип', 'малый бизнес')
+calculate_project_cost({1, 2, 3})
