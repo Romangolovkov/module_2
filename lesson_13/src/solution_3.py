@@ -5,11 +5,11 @@ cashe: dict[tuple: int] = {}
 
 def decorator_cashe(func: Callable[[tuple], int]) -> Callable[[tuple], None]:
     def wrapper(*args):
-        if tuple(args) in cashe:
+        if args in cashe:
             print(f'Загрузили из кеша: {cashe[args]}')
         else:
-            print(f'Посчитали цену: {func(tuple(args))}')
-            cashe[tuple(args)] = func(tuple(args))
+            print(f'Посчитали цену: {func(*args)}')
+            cashe[args] = func(*args)
     return wrapper
 
 

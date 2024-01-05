@@ -22,5 +22,5 @@ def calculate_project_cost(*args, **kwargs) -> int:
 
 calculate_project_cost('Логотип', 'малый бизнес')
 calculate_project_cost('Логотип', 'малый бизнес')
-calculate_project_cost({1, 2, 3})
-calculate_project_cost({1, 2, 3})
+calculate_project_cost({1, 2, 3}, a=2)
+calculate_project_cost({1, 2, 3}, a=2)
