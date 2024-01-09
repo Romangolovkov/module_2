@@ -1,16 +1,10 @@
-def sort(products):
-    products_dict = {}
-    for product in products:
-        if product[1] in products_dict:
-            products_dict[product[1]] = products_dict[product[1]] + 1
-        else:
-         products_dict[product[1]] = 1
-    return products_dict
+def categorization(list_products: list[tuple[str]]) -> dict[str, int]:   
+   types_products: list[str] = list(map(lambda product: product[1], list_products))
+   return {type: types_products.count(type) for type in types_products}
+   
 
-def sort2(products):
-   products_dict = {}
-   return map(lambda product: products_dict[product[1]] = 1, products)
-
-
-print(sort2([('Рубашка', 'Одежда'), ('Кружка', 'Посуда')]))
-print(sort2([('Рубашка', 'Одежда'), ('Штаны', 'Одежда'), ('Кружка', 'Посуда')]))
+print()
+print(categorization([('Рубашка', 'Одежда'), ('Кружка', 'Посуда')]))
+print(categorization([('Рубашка', 'Одежда'), ('Штаны', 'Одежда'), ('Кружка', 'Посуда')]))
+print(categorization([('Ручка', 'Канцелярия'), ('Тетрадь', 'Канцелярия'), ('Кружка', 'Посуда'), ('Стул', 'Мебель')]))
+print()
