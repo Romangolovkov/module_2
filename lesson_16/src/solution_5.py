@@ -17,4 +17,4 @@ def spiral_matrix(size: int) -> list[list[int]]:
 
     
 for row in spiral_matrix(7):
-        print(f"{' '.join([str(elem).ljust(2) for elem in row])}")
+        print(' '.join([str(elem).ljust(2) for elem in row]))
