@@ -1,4 +1,4 @@
-def spiral_matrix(size: int) -> None:
+def spiral_matrix(size: int) -> list[list[int]]:
     matrix: list[list[int]] = [[0] * size for i in range(size)]
     numbers: list[int] = [i for i in range(1, size * size + 1)]
     
