@@ -15,6 +15,7 @@ def spiral_matrix(size: int) -> list[list[int]]:
         matrix[size // 2][size // 2] = numbers.pop(0)
     return matrix
 
-    
-for row in spiral_matrix(7):
-        print(' '.join([str(elem).ljust(2) for elem in row]))
+
+size: int = 12    
+for row in spiral_matrix(size):
+        print(' '.join([str(elem).ljust(len(str(size**2))) for elem in row]))
